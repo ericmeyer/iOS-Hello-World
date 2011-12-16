@@ -1,15 +1,15 @@
-//
-//  HelloWorldViewController.m
-//  HelloWorld
-//
-//  Created by Eric Meyer on 12/15/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "HelloWorldViewController.h"
 
 @implementation HelloWorldViewController
 
+@synthesize helloWorldLabel, nameTextField;
+
+- (IBAction) sayHello:(id)sender {
+    NSString* name = [NSString stringWithFormat: @"Hello %@", self.nameTextField.text];
+    self.helloWorldLabel.text = name;
+}
+
+// More code below
 - (void)dealloc
 {
     [super dealloc];
